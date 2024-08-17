@@ -33,7 +33,26 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
-    public Long getId() {
+    public User() {
+		super();
+	}
+
+	public User(Long id, String name, Account account, Card card) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.account = account;
+		this.card = card;
+	}
+
+	
+	
+	public User(Long id) {
+		super();
+		this.id = id;
+	}
+
+	public Long getId() {
         return id;
     }
 

@@ -25,8 +25,18 @@ public class Account {
 
     @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
+    
+    public Account() {
+		super();
+	}
+    
+	public Account(String number) {
+		super();
+		this.number = number;
+	}
 
-    public Long getId() {
+
+	public Long getId() {
         return id;
     }
 
